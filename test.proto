@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package test;
+
+
+service Test{
+  rpc Test01(Test01Req) returns(Test01Reply){}
+}
+
+
+message Test01Req{
+  string name = 1;
+}
+
+message Test01Reply{
+  map <string, string> result = 1;
+}
